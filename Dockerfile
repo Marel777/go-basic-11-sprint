@@ -6,6 +6,6 @@ COPY . .
 
 RUN go mod tidy
 
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o tracker
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /usr/src/app/tracker
 
 CMD ["/usr/src/app/tracker"]
